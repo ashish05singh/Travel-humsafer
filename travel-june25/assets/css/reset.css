@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: .5px;
+    font-family: "Poppins", sans-serif;
+}
+h1{
+    font-size: 45px;
+    font-weight: 600;
+}
+h2{
+    font-size: 65px;
+    font-weight: 600;
+}
+h3{
+    font-size: 25px;
+    font-weight: 600;
+}
+h4,
+h5,
+h6{
+    font-size: 18px;
+    font-weight: 500;
+}
+p{
+    font-size: 15px;
+    font-weight: 400;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}
+
+button{
+    cursor: pointer;
+}
+
+input{
+    outline: none;
+}
+
+textarea{
+    outline: none;
+}
+.btn{
+    cursor: pointer;
+    padding: 10px;
+    border: none;
+    background-color: rgb(29, 131, 160);
+
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .3s;
+    display: inline-block;
+    min-width: 130px;
+    text-align: center;
+    outline: 0px;
+}
+.btn:hover{
+    background-color: rgb(15, 36, 84);
+    color: #fff;
+}
+.mr-5 {
+    margin-right: 5px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-15 {
+    margin-right: 15px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.ml-5 {
+    margin-left: 5px;
+}
+.ml-10 {
+    margin-left: 10px;
+}
+.ml-15 {
+    margin-left: 15px;
+}
+.ml-20 {
+    margin-left: 20px;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.pd-5 {
+    padding: 5px;
+}
+.pd-10 {
+    padding: 10px;
+}
+.pd-15 {
+    padding: 15px;
+}
+.pd-20 {
+    padding: 20px;
+}
+.pd-top{
+    padding-top: 10px;
+}
+.pd-top-15{
+    padding-top: 15px;
+}
+.pd-top-20{
+    padding-top: 20px;
+}
+.pd-top-25{
+    padding-top: 25px;
+}
+.pd-bottom{
+    padding-bottom: 10px;
+}
+.pd-bottom-15{
+    padding-bottom: 15px;
+}
+.pd-bottom-20{
+    padding-bottom: 20px;
+}
+.pd-left{
+    padding-left: 10px;
+}
+.pd-right{
+    padding-right: 10px;
+}

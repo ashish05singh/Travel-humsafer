@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Section</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        padding: 0 15px;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .left,
+      .right {
+        flex: 1 1 48%;
+      }
+
+      /* Accordion Style */
+      .accordion-item {
+        border: 1px solid #ddd;
+        margin-bottom: 20px;
+        line-height: 1.5;
+        border-radius: 4px;
+        color: #444;
+      }
+
+      .accordion-header {
+        padding: 15px;
+        background: #f5f5f5;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .accordion-content {
+        display: none;
+        padding: 15px;
+        background-color: #fff;
+        border-top: 1px solid #ddd;
+          transition: max-height 0.5s ease, padding 0.5s ease;
+      }
+
+      .accordion-content img {
+        width: 30%;
+
+        margin-right: 15px;
+        border-radius: 4px;
+      }
+
+      .accordion-body {
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      /* Right Side Info Cards */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        color: #444;
+      }
+
+      .info-card {
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: left;
+        line-height: 1.5;
+        transition: 0.3s;
+      }
+
+      .info-card:hover {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card i {
+        font-size: 30px;
+        color: red;
+        margin-bottom: 10px;
+      }
+      .accordion-header span{
+        font-size: 20px;
+        color: #ddd;
+        background-color: #444;
+        width: 30px;
+        align-items: center;
+        text-align: center;
+      }
+      .accordion-header span:hover{
+        background-color: red;
+        color: #ddd;
+      }
+      .about{
+        margin-bottom: 40px;
+        text-align: center;
+     
+        p{
+            line-height: 1;
+            color: #444;
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .row {
+          flex-direction: column;
+        }
+
+        .info-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .accordion-body {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="about">
+            <h1 style="text-align: center">About Company</h1>
+            <p style="text-align: center; ">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium totam rem.
+            </p>
+        </div>
+      <div class="row">
+        <!-- Left: Accordion -->
+        <div class="left">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              📷 About our Company <span>−</span>
+            </div>
+            <div class="accordion-content" style="display: inline-block">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="About Image" />
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing at only fivg,
+                  remaining essentially unchanged. It was popularised in the
+                  1960s with the release. Lorem Ipsum is simply dummy text of
+                  the printing at only fivg.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">⭐ Our Mission <span>+</span></div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="Mission Image" />
+                <p>
+                  Our mission is to provide top-quality laundry service to all
+                  homes and offices on time.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">⚙️ What we do <span>+</span></div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="What we do" />
+                <p>
+                  We offer affordable washing, ironing, and dry-cleaning
+                  services with pickup/delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">❓ How we do <span>+</span></div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="How we do" />
+                <p>
+                  Our team uses eco-friendly detergents and modern machines to
+                  ensure hygiene and quality.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">📞 Get Support <span>+</span></div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="Support" />
+                <p>
+                  Contact us anytime via phone, WhatsApp or Email. We’re always
+                  here to help you.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">📍 Locate Us <span>+</span></div>
+            <div class="accordion-content">
+              <div class="accordion-body">
+                <img src="poroject-03.jpg" alt="Location" />
+                <p>
+                  We’re located in Noida, Ghaziabad and nearby areas. Find us on
+                  Google Maps easily.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Info Grid -->
+        <div class="right">
+          <div class="info-grid">
+            <div class="info-card">
+              <i>⏱</i>
+              <h4>Always Available</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+            <div class="info-card">
+              <i>🏅</i>
+              <h4>Qualified Agents</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+            <div class="info-card">
+              <i>💲</i>
+              <h4>Fair Prices</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+            <div class="info-card">
+              <i>🎁</i>
+              <h4>Best Offers</h4>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const accHeaders = document.querySelectorAll(".accordion-header");
+
+      accHeaders.forEach((header) => {
+        header.addEventListener("click", () => {
+          const isActive = header.classList.contains("active");
+
+          // Close all
+          document.querySelectorAll(".accordion-header").forEach((h) => {
+            h.classList.remove("active");
+            h.nextElementSibling.style.display = "none";
+            h.querySelector("span").textContent = "+";
+          });
+
+          // Toggle current
+          if (!isActive) {
+            header.classList.add("active");
+            header.nextElementSibling.style.display = "block";
+            header.querySelector("span").textContent = "−";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

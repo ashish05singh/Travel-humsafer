@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Slick Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5ffff;
+    }
+.col-2 {
+  width: calc(50% - 20px);
+  margin-right: 20px;
+}
+    .container {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .contact-page {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 100vh;
+      padding: 40px;
+      gap: 40px;
+      justify-content: center;
+    }
+
+    .form-section {
+      flex: 1 1 50%;
+      max-width: 550px;
+      margin: 33px 0;
+      /* padding:20px 0; */
+    }
+
+    .form-section h1 {
+      font-size: 3.4rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .form-section p {
+      margin-bottom: 25px;
+      color: #555;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .name-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .name-group input {
+      flex: 1;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    button {
+      background-color: #1b5fc1;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1b5fc1;
+    }
+
+    .info-section {
+      flex: 1 1 40%;
+      display: flex;
+      flex-direction: column;
+      /* gap: 7px; */
+      margin: 20px 0;
+    }
+
+    .info-box {
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+      padding: 40px 0;
+    }
+
+    .info-box i {
+      font-size: 1.6rem;
+      background-color: #1b5fc1;
+      color: white;
+      padding: 10px;
+      /* border-radius: 50%; */
+    }
+
+    .location-box {
+      background-color: #1b5fc1;
+      color: white;
+      padding: 20px;
+      /* border-radius: 10px; */
+      display: flex;
+      gap: 15px;
+    }
+
+    .location-box i {
+      font-size: 1.8rem;
+      margin-top: 5px;
+    }
+
+    .location-box a {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 15px;
+      color: #fff;
+      text-decoration: underline;
+      border: 1px solid white;
+      padding: 10px;
+      /* border-radius: 8px; */
+      text-decoration: none;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 500px;
+    }
+
+    .lab-img {
+      width: 100%;
+      /* border-radius: 10px; */
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .contact-page {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .name-group {
+        flex-direction: column;
+      }
+
+      .form-section,
+      .info-section {
+        max-width: 100%;
+      }
+    }
+
+    .testimonial {
+      display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+
+     
+    }
+.testimonial {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.img-sec img {
+  width: 100%;
+
+}
+
+.content-sec {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.slider-sec {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  /* max-width: 100%; */
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.client {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.client-info {
+  display: flex;
+  gap: 20px;
+  padding: 30px 0;
+  /* justify-content: space-evenly; */
+}
+
+.client img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.client-name {
+  line-height: 1.5;
+  margin-top: 30px;
+}
+
+.quote a {
+  font-size: 50px;
+}
+
+.dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dots span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dots .active {
+  background-color: #000;
+}
+
+  </style>
+</head>
+
+<body>
+  <section>
+    <!-- <div class="container"> -->
+      <div class="testimonial">
+
+        <div class="col-2">
+          <div class="img-sec "><img src="poroject-03.jpg" alt=""></div>
+        </div>
+
+        <div class="col-2">
+          <div class="content-sec">
+          <h4>Our Clients</h4>
+          <h2>Clients Say About Us & Our business</h2>
+
+          <div class="slider-sec">
+            <div class="client">
+              <div class="quote">
+                <a href="">
+                  <i class="fa-solid fa-quote-left"></i>
+
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                </p>
+              </div>
+              <div class="client-info">
+                <div><img src="poroject-03.jpg" alt="Client" /></div>
+                <div class="client-name">
+                  <h5>Client Name</h5>
+                  <p>Custumer</p>
+                </div>
+              </div>
+            </div>
+            <!-- client section  -->
+            <div class="client">
+              <div class="quote">
+                <a href="">
+                  <i class="fa-solid fa-quote-left"></i>
+
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                </p>
+              </div>
+              <div class="client-info">
+                <div><img src="poroject-03.jpg" alt="Client" /></div>
+                <div class="client-name">
+                  <h5>Client Name</h5>
+                  <p>Custumer</p>
+                </div>
+              </div>
+            </div>
+            <!-- client section  -->
+            <div class="client">
+              <div class="quote">
+                <a href="">
+                  <i class="fa-solid fa-quote-left"></i>
+
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quaes
+                </p>
+              </div>
+              <div class="client-info">
+                <div><img src="poroject-03.jpg" alt="Client" /></div>
+                <div class="client-name">
+                  <h5>Client Name</h5>
+                  <p>Custumer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        </div>
+      </div>
+  </section>
+
+
+   <section> 
+    <div class="container">
+      <div class="contact-page">
+        <div class="form-section">
+          <h1>Send Us Message</h1>
+          <p>
+            Urna congue faucibus rhoncus a ultrices nec at pulvinar convallis
+            ac vitae amet condimentum risus pharetra rhoncus pretium consequat
+            cras feugiat lorem nam non.
+          </p>
+          <form>
+            <div class="name-group">
+              <input type="text" placeholder="First" required />
+              <input type="text" placeholder="Last" required />
+            </div>
+            <input type="email" placeholder="Email" required />
+            <input type="text" placeholder="Subject" required />
+            <textarea placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+
+        <div class="info-section">
+          <div class="info-box">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>Call Us</h4>
+              <p>+1 123 456 7890</p>
+            </div>
+
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email Us</h4>
+              <p>info@example.com</p>
+            </div>
+          </div>
+
+          <div class="location-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Our Location</h4>
+              <p>Midtown Manhattan 123 5th Ave, New York, NY 1021, US.</p>
+              <a href="#">Get Directions</a>
+            </div>
+          </div>
+
+          <img src="assets/image/diagnostic.jpg" alt="Lab Image" class="lab-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28454.74361562285!2d80.9318224!3d26.9401928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1748415575548!5m2!1sen!2sin"
+        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+   
+<script>
+  $(".slider-sec").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    arrows: true,
+    autoplaySpeed: 2500,
+    speed: 400,
+    infinite: true,
+    dots: true,
+    fade: false,
+    // centerMode: false,
+    // justify:false,
+    // cssEase: "linear",
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll:1 ,
+          // centerMode: false,
+        } },
+  
+        {
+          breakpoint: 420,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            // centerMode: false,
+          },
+      },
+    ],
+  });
+
+</script>
+
+</body>
+
+</html>
